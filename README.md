@@ -1,4 +1,4 @@
-# IMDb-Clone
+# IMDB-clone app
 
 ![](images/home_page.png)
 ![](images/movie_page.png)

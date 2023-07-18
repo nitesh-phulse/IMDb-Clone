@@ -1,0 +1,408 @@
+/*importlinks*/
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+/* CSS Variables */
+:root {
+  --default-text-color: #fff;
+  --logo-color: rgb(253, 206, 35);
+  --page-background-color: #e3efef;
+  --form-color: rgb(109, 114, 121);
+  --search-icon-color: #3d3e43;
+  --card-color: rgb(31, 32, 32);
+  --default-heart-color: rgb(247, 245, 245);
+  --heart-red-color: #ec0638;
+  --favourite-section-color: rgb(28, 28, 27);
+  --fav-movie-card-color: rgb(12, 11, 11);
+  --delete-button-color: #f0eeee;
+  
+}
+
+body {
+  background: rgb(24,24,25);
+  background: linear-gradient(180deg, rgba(24,24,25,1) 0%, rgba(244,32,32,1) 54%, rgba(14,14,13,1) 100%);
+  color: var(--default-text-color);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* NAVBAR */
+
+.navbar{
+  
+  background: transparent !important;
+  backdrop-filter: blur(40px)!important;
+  box-shadow: #f0eeee;
+  
+}
+
+.greeting-message {
+  margin-right: auto !important;
+  margin-left: auto !important;
+  font-size: 17px;
+  margin-top: 6px !important;
+}
+
+.site-name {
+  color: var(--logo-color);
+  position: absolute;
+  top: 0;
+}
+
+#search-bar {
+  color: tra;
+  height: 40px;
+  width: 50vw;
+}
+
+form {
+  width: inherit;
+  background-color: var(--form-color);
+  border-radius: 50px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+input {
+  width: 90%;
+  height: 2.5rem;
+  outline: none;
+  padding: 1.5rem;
+  border: 0;
+  background-color: transparent;
+  color: var(--default-text-color);
+}
+
+::placeholder {
+  opacity: 0.7;
+  color: var(--default-text-color);
+}
+
+#search-btn {
+  height: 2.9rem;
+  width: 4.8rem;
+  border: transparent;
+  background-color: rgb(68, 180, 224) !important;
+}
+
+.search-icon {
+  font-size: 25px;
+  color: var(--search-icon-color);
+}
+
+#show-favourites {
+  font-family: 'Sen', sans-serif;
+  display: none;
+  font-size: 1.7rem;
+}
+/* Nav Bar Ends */
+/* MAIN SECTION */
+
+#main-section {
+  min-height: 89vh;
+  width: 65%;
+  color: #ec0638;
+}
+
+h2 {
+  font-family: 'Sen', sans-serif;
+  padding-left: 0.5rem;
+  margin: 2% 4%;
+  color: rgb(236, 221, 12) !important;
+}
+
+#Suggestions-container {
+  min-height: 30%;
+  justify-content: center;
+  
+  padding: .08rem;
+  
+}
+#empty-search-text{
+  color: rgb(175, 168, 168) !important;
+  font-size: 30px !important;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .1em solid rgb(203, 199, 192); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 2 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .1em; /* Adjust as needed */
+  animation: 
+    typing 7.5s steps(40, end),
+    blink-caret .90s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 50% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+ 0% { border-color:transparent }
+}
+
+/* card  */
+
+a {
+  box-sizing: border-box;
+}
+
+#card-container {
+  font-family: 'Sen', sans-serif;
+  width: inherit;
+  display: list-item;
+  gap: 1rem;
+  padding: 150px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: auto;
+}
+
+.card {
+  font-family: 'Sen', sans-serif;
+  border: transparent;
+  margin-right: auto;
+    margin-left: auto;
+    width: 200px;
+    box-shadow: 0 15px 25px rgba(94, 91, 91, 0.2);
+    height: 370px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.2)!important;
+    padding: 20px;
+    text-align: center;
+ /* background-color: var(--card-color);*/
+  
+}
+
+.card > img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.card-title {
+  font-size: medium;
+  font-weight: 500;
+}
+
+.card-title a {
+  text-decoration: none;
+  color: var(--default-text-color);
+}
+
+.card-title a:hover {
+  text-decoration: underline;
+}
+
+.card-text {
+  font-family: 'Sen', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+
+.fa-star {
+  color: var(--logo-color);
+}
+
+.text-decoration {
+  text-decoration: none;
+}
+
+#rating {
+  color: var(--default-text-color);
+  font-size: small;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.fav-btn {
+  border: transparent;
+  background-color: transparent;
+  text-align: center;
+}
+
+.fa-heart {
+  color: var(--default-heart-color);
+}
+
+.fa-heart:hover {
+  color: var(--heart-red-color);
+}
+
+/* FAVORITES SECTION */
+
+#favorites-section {
+  font-family: 'Sen', sans-serif;
+  width: 33%;
+  height: 100vh;
+  background-color: var(transparent);
+  z-index: 1;
+  flex-direction: column;
+}
+
+#empty-fav-text {
+  margin-top: 40%;
+  margin-left: 15%;
+}
+
+#fav-movies-container {
+  font-family: 'Sen', sans-serif;
+  overflow-y: scroll;
+  width: 90%;
+  height: 90%;
+}
+
+/* Scrollbar customisation */
+
+#fav-movies-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+#fav-movies-container::-webkit-scrollbar-track {
+  border-radius: 20px;
+}
+
+/* Handle */
+#fav-movies-container::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+}
+
+.fav-movie-card {
+  padding-right: 1rem;
+  width: 95%;
+  background-color: var(--fav-movie-card-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fav-movie-poster {
+  width: 80px;
+  height: 100px;
+}
+
+.fav-movie-name {
+  text-decoration: none;
+  color: var(--default-text-color);
+
+}
+
+
+
+.fav-movie-name:hover {
+ 
+  color: var(--default-text-color);
+  text-decoration: underline;
+
+}
+
+
+.movie-card-details {
+  width: 60%;
+}
+
+.delete-btn {
+  cursor: pointer;
+}
+
+.delete-button-color:hover{
+  
+  color: red;
+}
+
+
+.fa-trash-can {
+  color: var(--delete-button-color);
+  font-size: 1.3rem;
+}
+
+.fa-trash-can:hover {
+  color: var(--heart-red-color);
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 1200px) {
+  #card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #favorites-section {
+    width: 40vw;
+    height: 100vh;
+  }
+
+  #card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    width: 8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .site-name {
+    display: none;
+  }
+
+  #favorites-section {
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 60vw;
+    height: 100vh;
+  }
+
+  #show-favourites {
+    padding-right: 1rem;
+    display: block;
+  }
+
+  #main-section {
+    min-height: 100vh;
+    width: 100vw;
+  }
+
+  #card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #search-bar {
+    margin-left: 3%;
+    height: 35px;
+    width: 55vw;
+    padding-bottom: 2.5rem;
+  }
+
+  #show-favourites {
+    padding-right: 0.1rem;
+  }
+
+  #card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    width: 9rem;
+  }
+
+  #favorites-section {
+    width: 100vw;
+    height: 100vh;
+  }
+}

@@ -1,0 +1,131 @@
+/*import links */
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+/* CSS Variables */
+:root {
+  --default-text-color: #fff;
+  --logo-color: rgb(253, 206, 35);
+  --page-background-color: #2c3333;
+  --card-text-color: rgb(232, 233, 243);
+  --info-color: #7dabef;
+}
+
+body {
+  font-family: 'Sen', sans-serif;
+  background: url(https://images.unsplash.com/photo-1544306094-e2dcf9479da3) no-repeat;
+  background-color: var(--page-background-color);
+  background-attachment: fixed; 
+  background-size: cover;
+  display: grid;
+
+  
+  color: var(--default-text-color);
+}
+
+/* NAVBAR */
+.navbar{
+  background: transparent !important;
+  backdrop-filter: blur(30px)!important;
+  background: inherit;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center !important;
+}
+
+.greeting-message {
+  margin-right: auto !important;
+  margin-left: auto !important;
+  font-size: 20px;
+  margin-top: 6px !important;
+}
+
+
+.fa-star {
+  color: var(--logo-color);
+}
+
+.site-name {
+  color: var(--logo-color);
+  position: absolute;
+  top: 0px;
+}
+
+
+/* Movie card*/
+.card {
+  font-family: 'Sen', sans-serif;
+ 
+ width: 900rem;
+  height: 25rem;
+  box-shadow: 0 0 1rem 0 rgba(140, 234, 243, 0.2); 
+  border-radius: 25px;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(25px)!important;
+  background: inherit;
+  overflow: hidden;
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(236, 228, 228, 0.655);
+  
+  margin: -20px;
+}
+
+.card-text {
+  font-family: 'Sen', sans-serif;
+  text-align: justify;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: white;
+}
+
+.info-type {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--logo-color);
+}
+
+.information {
+  font-family: 'Sen', sans-serif;
+  font-weight: 500;
+  font-size: 0.9em;
+  color: rgb(4, 82, 7) !important;
+  }
+
+
+/* Responsiveness */
+@media screen and (max-width: 767px) {
+  #poster {
+    margin-top: 1rem;
+    border-radius: 5px !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #title {
+    font-size: x-large;
+  }
+
+  h6 {
+    font-size: medium;
+  }
+
+  h5 {
+    font-size: medium;
+  }
+
+  #poster {
+    margin-top: 0px;
+    width: 100%;
+  }
+}
